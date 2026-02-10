@@ -109,9 +109,9 @@ function App() {
             onMouseEnter={handleNoHover}
             onTouchStart={handleNoHover}
             style={{
-              position: noButtonPosition.top || noButtonPosition.left ? 'absolute' : 'relative',
-              top: noButtonPosition.top ? `${noButtonPosition.top}px` : 'auto',
-              left: noButtonPosition.left ? `${noButtonPosition.left}px` : 'auto',
+              position: noButtonPosition.top !== 0 || noButtonPosition.left !== 0 ? 'absolute' : 'relative',
+              top: noButtonPosition.top !== 0 ? `${noButtonPosition.top}px` : 'auto',
+              left: noButtonPosition.left !== 0 ? `${noButtonPosition.left}px` : 'auto',
             }}
           >
             No
